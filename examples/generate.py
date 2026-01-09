@@ -214,6 +214,10 @@ Examples:
         writer.write_dataset(tasks)
         
         print(f"✅ Done! Generated {len(tasks)} tasks in {args.output}/{config.domain}_task/")
+    
+    except Exception as e:
+        print(f"❌ Error: {e}")
+        raise
 
 
 if __name__ == "__main__":
